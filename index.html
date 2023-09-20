@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+body {
+  background-color: rgba(108, 99, 109, 0.123); 
+  /* stretch not more than 700px */
+  max-width: 700px;
+  }
+
+.img {
+  background-image: url('bkgimg4x5.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 900px;
+  }
+
+.logo {
+  position: absolute;
+  /* somehow this keeps logo on screen */
+  max-width: 200px;
+  bottom: 10%;
+  left: 40%;
+  font-size: 0.8em;
+  text-align: center;
+  }
+
+* {box-sizing: border-box;}
+
+html {font-family: "Lucida Sans", sans-serif;}
+
+.intro {
+  font-size: 1.5em;
+  text-align: center;
+  padding: 8%;
+  }
+  
+/* Popup container */ 
+.popup {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  }  
+  
+/* container class for positioning buttons */ 
+.btn-pos {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  }
+   
+/* container class for styling buttons */ 
+.btn { 
+  padding: 4px;
+  background: grey;
+  color: white;
+  border-radius: 5px;
+  }  
+  
+.btn:hover {background-color: blue;}
+
+/* container class for a popup text */ 
+.popup-txt {
+  visibility: hidden;
+  position: fixed;
+  display: block;
+  background-image: url('bkgimg4x5.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 900px;
+  color: black;
+  z-index: 1;
+  top: 5%; 
+  left: 5%; 
+  right: 5%; 
+  bottom: 5%
+  }
+  
+.show-popup {
+  visibility: visible; 
+  animation: fadeIn 3s;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="img">
+  <div class="intro">
+    <div class=""img"></div>
+    <h2>Welcome!</h2>
+    <p>TS Concierge provides a one to one home service for chores and odd jobs around your home.</p>
+  </div>
+</dive>
+
+<div class="btn-pos">
+  <div button type="button" class="popup btn" onclick="popBtn1()">What Jobs</button>
+    <span class="popup-txt" id="popUp1">A simple test 1</span>
+  </div>
+  <div button type="button" class="popup btn" onclick="popBtn2()">Affordable</button>
+    <span class="popup-txt" id="popUp2">A simple test 2</span>
+  </div>
+  <div button type="button" class="popup btn" onclick="popBtn3()">Contact</button>
+    <span class="popup-txt" id="popUp3">A simple test 3</span>
+  </div>
+</div>
+
+<div class="logo">
+  <img src="Logo.png" alt="No logo displayed"> 
+  <p>Jobs under $3300<br>
+     Non electrical, mechanical or plumbing.</p>
+</div>
+
+<script>
+function popBtn1() {
+  var popup = document.getElementById("popUp1");
+  popup.classList.toggle("show-popup");
+  }
+  
+function popBtn2() {
+  var popup = document.getElementById("popUp2");
+  popup.classList.toggle("show-popup");
+  } 
+  
+function popBtn3() {
+  var popup = document.getElementById("popUp3");
+  popup.classList.toggle("show-popup");
+  } 
+  
+</script>
+
+</body>
+</html>
