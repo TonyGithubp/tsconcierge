@@ -22,9 +22,8 @@ body {
   /* somehow this keeps logo on screen */
   max-width: 200px;
   bottom: 10%;
-  left: 10%;
+  margin-left: 10%;
   font-size: 0.8em;
-  text-align: center;
   }
 
 * {box-sizing: border-box;}
@@ -71,8 +70,9 @@ html {font-family: "Lucida Sans", sans-serif;}
   background-size: contain;
   height: 900px;
   color: black;
+  padding: 8%;
   z-index: 1;
-  top: 5%; 
+  top: 1%; 
   left: 5%; 
   right: 5%; 
   bottom: 5%
@@ -81,6 +81,12 @@ html {font-family: "Lucida Sans", sans-serif;}
 .show-popup {
   visibility: visible; 
   animation: fadeIn 3s;
+  }
+
+ul.lst {
+  list-style-position: outside;
+  padding: 8px;
+  margin: 0;
   }
 
 </style>
@@ -97,13 +103,38 @@ html {font-family: "Lucida Sans", sans-serif;}
 
 <div class="btn-pos">
   <div button type="button" class="popup btn" onclick="popBtn1()">What Jobs</button>
-    <span class="popup-txt" id="popUp1">A simple test 1</span>
+    <span class="popup-txt" id="popUp1">
+      <h3>I can do & or help you with these tasks:</h3>
+      <ul class="lst">
+        <li>Lawn moving</li>
+        <li>Cut down small trees (less than 3.5m high)</li>
+        <li>Clean up for parties</li>
+        <li>Assemble items</li>
+        <li>Hang picture frames</li>
+        <li>Deliver surprised birthday cakes</li>
+        <li>Grocery shopping</li>
+        <li>Hand car wash</li>
+        <li>etc, u got the idea</li>
+      </ul>
+    </span>
   </div>
   <div button type="button" class="popup btn" onclick="popBtn2()">Affordable</button>
-    <span class="popup-txt" id="popUp2">A simple test 2</span>
+    <span class="popup-txt" id="popUp2">
+      An hourly rate or job based fee.<br><br>
+      Simply tell me what you want done and I will come to do it for you personaly,
+      hassel free.<br><br>
+      A 10% discount for every 10th service.<br><br>
+      I take pride in being honest, responsible and trusthworthy in providing my services.<br>
+    </span>
   </div>
   <div button type="button" class="popup btn" onclick="popBtn3()">Contact</button>
-    <span class="popup-txt" id="popUp3">A simple test 3</span>
+    <span class="popup-txt" id="popUp3">
+      For most tasks, you can just simply tell me with a photo or 2.<br><br>
+      For big jobs, I come to you for a free quote.<br><br><br>
+      Phone: 04818 32896<br><br>
+      Email: sar@tsconcierge.com.au<br><br>
+      Serving Brisbane South East within 30kms from Browns Plains.
+    </span>
   </div>
 </div>
 
