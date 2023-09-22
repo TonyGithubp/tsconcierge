@@ -10,31 +10,32 @@ body {
   max-width: 700px;
   }
 
-.img {
+* {box-sizing: border-box;}
+
+/* Logo and text besides it -------------------------------------------- */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  }
+
+.logo {
+  flex-basis: 15%; 
+  margin-left: 5%;
+  }
+/* --------------------------------------------------------------------- */
+
+.intro {
   background-image: url('bgimg4x5.png');
   background-repeat: no-repeat;
   background-size: contain;
   height: 900px;
-  }
-
-.logo {
-  position: absolute;
-  /* somehow this keeps logo on screen */
-  max-width: 200px;
-  bottom: 10%;
-  margin-left: 10%;
-  font-size: 0.8em;
-  }
-
-* {box-sizing: border-box;}
-
-html {font-family: "Lucida Sans", sans-serif;}
-
-.intro {
   font-size: 1.5em;
   text-align: center;
   padding: 8%;
   }
+
+html {font-family: "Lucida Sans", sans-serif;}
   
 /* Popup container */ 
 .popup {
@@ -48,6 +49,8 @@ html {font-family: "Lucida Sans", sans-serif;}
   display: flex;
   align-items: center;
   justify-content: space-around;
+  font-size: 0.65em;
+  padding-top: 45%;
   }
    
 /* container class for styling buttons */ 
@@ -70,17 +73,18 @@ html {font-family: "Lucida Sans", sans-serif;}
   background-size: contain;
   height: 900px;
   color: black;
-  padding: 8%;
-  z-index: 1;
-  top: 1%; 
-  left: 5%; 
-  right: 5%; 
-  bottom: 5%
   }
   
 .show-popup {
   visibility: visible; 
   animation: fadeIn 3s;
+  z-index: 1;
+  padding: 8%;
+  text-align: left;
+  top: 11%;
+  left: 5%; 
+  right: 5%; 
+  bottom: 5%
   }
 
 ul.lst {
@@ -93,18 +97,28 @@ ul.lst {
 </head>
 <body>
 
-<div class="img">
-  <div class="intro">
-    <div class=""img"></div>
+<div class="container">
+  <div class="logo">
+    <img src="logo.png" alt="No logo displayed">
+  </div>
+  <div>
+    <p style="line-height: 1;">TS Concierge <br>
+       <span style="color: red; font-size: small;">1 to 1 Home Service</span>
+      </p>
+  </div>
+  <div></div>
+</div>
+  
+<div class="intro">
+  <div>
     <h2>Welcome!</h2>
     <p>TS Concierge provides one-to-one home services for chores and odd jobs around your home.</p>
   </div>
-</dive>
 
 <div class="btn-pos">
   <div button type="button" class="popup btn" onclick="popBtn1()">What Jobs</button>
     <span class="popup-txt" id="popUp1">
-      <h3>I can do & or help you with these tasks:</h3>
+      <h3>Some tasks I can help you with, include:</h3>
       <ul class="lst">
         <li>Lawn moving</li>
         <li>Cut down small trees (less than 3.5m high)</li>
@@ -114,8 +128,11 @@ ul.lst {
         <li>Deliver surprised birthday cakes</li>
         <li>Grocery shopping</li>
         <li>Hand car wash</li>
-        <li>etc...u got the idea</li>
+        <li>etc...(u got the idea)</li>
       </ul>
+      <p style="font-weight: bold; font-size: small;">
+        (Jobs under $3,300 only, not electrical or plumbing)
+      </p>
     </span>
   </div>
   <div button type="button" class="popup btn" onclick="popBtn2()">Affordable</button>
@@ -136,12 +153,6 @@ ul.lst {
       Serving Brisbane South East within 30kms from Browns Plains.
     </span>
   </div>
-</div>
-
-<div class="logo">
-  <img src="Logo.png" alt="No logo displayed"> 
-  <p>Jobs under $3,300 only<br>
-     Not electrical, mechanical or plumbing.</p>
 </div>
 
 <script>
