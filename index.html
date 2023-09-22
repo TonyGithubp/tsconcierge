@@ -7,7 +7,7 @@
 body {
   background-color: rgba(108, 99, 109, 0.123); 
   /* stretch not more than 700px */
-  max-width: 700px;
+  max-width: 600px;
   }
 
 * {box-sizing: border-box;}
@@ -93,6 +93,21 @@ ul.lst {
   margin: 0;
   }
 
+/* For screen bigger than 400px -------------------------------------------- */
+@media screen and (min-width: 400px) {
+  body {
+    max-width: 600px;
+    .logo {flex-basis: 5%;}
+    font-size: 1.2em;
+    background-image: url("bk image2");
+    }
+
+  .popup-txt { 
+    max-width: 600px; 
+    line-height: 1.6;} 
+  }
+/* ------------------------------------------------------------------------- */
+
 </style>
 </head>
 <body>
@@ -103,7 +118,7 @@ ul.lst {
   </div>
   <div>
     <p style="line-height: 1;">TS Concierge <br>
-       <span style="color: red; font-size: small;">1 to 1 Home Service</span>
+       <span style="color: red; font-size: small;">1 to 1 Home Service 4 u</span>
       </p>
   </div>
   <div></div>
@@ -170,7 +185,6 @@ function popBtn3() {
   var popup = document.getElementById("popUp3");
   popup.classList.toggle("show-popup");
   } 
-  
 </script>
 
 </body>
