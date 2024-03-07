@@ -1,194 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TS Concierge - Garden & Lawn Care</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('bkground.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            background-attachment: fixed;
+        }
 
-body {
-  background-color: rgba(108, 99, 109, 0.123); 
-  /* stretch not more than 700px */
-  max-width: 600px;
-  }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            position: relative;
+        }
 
-* {box-sizing: border-box;}
+        header img {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
 
-/* Logo and text besides it -------------------------------------------- */
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  }
+        header h1 {
+            display: inline-block;
+            margin-left: 30px;
+        }
 
-.logo {
-  flex-basis: 15%; 
-  margin-left: 5%;
-  }
-/* --------------------------------------------------------------------- */
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
 
-.intro {
-  background-image: url('bgimg4x5.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 900px;
-  font-size: 1.5em;
-  text-align: center;
-  padding: 8%;
-  }
+        nav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
 
-html {font-family: "Lucida Sans", sans-serif;}
-  
-/* Popup container */ 
-.popup {
-  position: relative;
-  display: block;
-  cursor: pointer;
-  }  
-  
-/* container class for positioning buttons */ 
-.btn-pos {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  font-size: 0.65em;
-  padding-top: 45%;
-  }
-   
-/* container class for styling buttons */ 
-.btn { 
-  padding: 4px;
-  background: grey;
-  color: white;
-  border-radius: 5px;
-  }  
-  
-.btn:hover {background-color: blue;}
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
 
-/* container class for a popup text */ 
-.popup-txt {
-  visibility: hidden;
-  position: fixed;
-  display: block;
-  background-image: url('bkgimg4x5.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 900px;
-  color: black;
-  }
-  
-.show-popup {
-  visibility: visible; 
-  animation: fadeIn 3s;
-  z-index: 1;
-  padding: 8%;
-  text-align: left;
-  top: 11%;
-  left: 5%; 
-  right: 5%; 
-  bottom: 5%
-  }
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+            nav a {
+                float: none;
+                width: 100%;
+                text-align: left;
+            }
+        }
 
-ul.lst {
-  list-style-position: outside;
-  padding: 8px;
-  margin: 0;
-  }
+        footer {
+            background-color: #333;
+            color: red;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
 
-/* For screen bigger than 400px -------------------------------------------- */
-@media screen and (min-width: 400px) {
-  body {
-    max-width: 600px;
-    .logo {flex-basis: 5%;}
-    font-size: 1.2em;
-    background-image: url("bk image2");
-    }
+        .flashing-text {
+            color: red;
+            font-size: 2em;
+            animation: flash 3s infinite;
+        }
 
-  .popup-txt { 
-    max-width: 600px; 
-    line-height: 1.6;} 
-  }
-/* ------------------------------------------------------------------------- */
-
-</style>
+        @keyframes flash {
+            0%, 50%, 100% {
+                opacity: 1;
+            }
+            25%, 75% {
+                opacity: 0;
+            }
+        }    
+    </style>
 </head>
 <body>
 
-<div class="container">
-  <div class="logo">
-    <img src="logo.png" alt="No logo displayed">
-  </div>
-  <div>
-    <p style="line-height: 1;">TS Concierge <br>
-       <span style="color: red; font-size: small;">1 to 1 Home Service 4 u</span>
-      </p>
-  </div>
-  <div></div>
-</div>
-  
-<div class="intro">
-  <div>
-    <h2>Welcome!</h2>
-    <p>TS Concierge provides an errand running service tailored for a personalized help with chores and odd jobs around the home.</p>
-  </div>
+    <header>
+        <img src="logo.png" alt="Logo">
+        <h1>TS Concierge - <span style="color:green;">Garden & Lawn Care</span></h1>
+    </header>
 
-<div class="btn-pos">
-  <div button type="button" class="popup btn" onclick="popBtn1()">What Jobs</button>
-    <span class="popup-txt" id="popUp1">
-      <h3>Some tasks I can help you with, include:</h3>
-      <ul class="lst">
-        <li>Garden weeds, water, clean</li>
-        <li>Minor handyman, hang picture frames</li>
-        <li>Hand car wash</li>
-        <li>Shop & deliver grocery</li>
-        <li>Walk & take pets to a vet</li>
-        <li>Deliver surprise birthday cakes</li>
-        <li>Mind odd jobs while u r away</li>
-        <li>Home declutter & light cleaning</li>
-        <li>etc...(u got the idea!)</li>
-      </ul>
-      <p style="font-weight: bold; font-size: small;">
-        (Jobs under $3,300 only, not electrical or plumbing)
-      </p>
-    </span>
-  </div>
-  <div button type="button" class="popup btn" onclick="popBtn2()">Affordable</button>
-    <span class="popup-txt" id="popUp2">
-      An hourly rate or job based fee.<br><br>
-      Minimum $50 for tasks taking up to 45 minutes, then $12 for every 15 minutes.<br><br>
-      For example: tasks taking 1.5 hrs to complete would cost 50 + 12x3 = $86.<br><br>
-      A 10% discount for every 10th errand run service.<br><br>
-      I take pride in providing a courteous and loyal service to my customers.<br>
-    </span>
-  </div>
-  <div button type="button" class="popup btn" onclick="popBtn3()">Contact</button>
-    <span class="popup-txt" id="popUp3">
-      For most tasks, you can just simply tell me with photos.<br><br>
-      For big jobs, I come to you for a free quote.<br><br><br>
-      <b>Enquiry & booking:</b><br>
-      04818 32896<br>
-      <a href="mailto:sar@tsconcierge.com.au">sar@tsconcierge.com.au</a><br><br>
-      Feedback : <a href="https://www.facebook.com/tsconcierge/" target="_blank">Facebook</a><br><br>
-      Serving Brisbane South East (30kms from Browns Plains)<br><br>
-      ABN & insured.
-    </span>
-  </div>
-</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#garden-care">Garden Care</a>
+        <a href="#lawn-care">Lawn Care</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-<script>
-function popBtn1() {
-  var popup = document.getElementById("popUp1");
-  popup.classList.toggle("show-popup");
-  }
-  
-function popBtn2() {
-  var popup = document.getElementById("popUp2");
-  popup.classList.toggle("show-popup");
-  } 
-  
-function popBtn3() {
-  var popup = document.getElementById("popUp3");
-  popup.classList.toggle("show-popup");
-  } 
-</script>
+    <footer>
+        <span class="flashing-text">Website is currently under development!</span>
+    </footer>
 
 </body>
 </html>
