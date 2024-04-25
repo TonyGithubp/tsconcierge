@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         /* For mobile devices */
-        @media only screen and (max-width: 500px) {
+        @media only screen and (max-width: 400px) {
             /* Position of each slide panel */
             /* Notes: justify-content: center; and align-items: center; align the content, not the slder
                To align the slider vertically, set the height of the container element, .testimonial-slider,
@@ -32,7 +32,7 @@
                 text-align: center; 
                 /* Slide box to have a constant WxH dimension 235px x 145px */
                 width: 235px;
-                height: 145px;
+                height: 160px;
                 padding-left: 10px;
                 padding-right: 10px;
                 padding-top: 10px;
@@ -44,7 +44,7 @@
         }
         
         /* For larger screens */
-        @media only screen and (min-width: 501px) {
+        @media only screen and (min-width: 401px) {
             /* Position of each slide panel */
             .testimonial-slider {
                 width: 400px; /* Adjust the width of slider panel */
@@ -55,7 +55,7 @@
                 align-items: center; /* Center items vertically */
                 /* Fill the viewport vertically, so flex-direction: column can center it vertically */
                 /* When 100vh, buttons are at bottom of screen and can't be raised up, so use 80vh */
-                height: 80vh;
+                height: 65vh;
                 flex-direction: column; /* Stack slides vertically */
             }
 
@@ -145,7 +145,7 @@
         <!-- Individual testimonial slides -->
         <div class="testimonial-slide">
             <span>"Awesome job at mowing the lawn. Highly recommend."</span>
-            <br><br><br>
+            <br><br><br><br>
             <!-- Unicode characters &nbsp = space, &#x2605 = star -->
             <cite>Richard</cite>
             <br><cite><span class="star-rating">(5) &#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span></cite>
