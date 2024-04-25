@@ -6,118 +6,61 @@
     <title>Testimonials - TS Concierge</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* For mobile devices */
-        @media only screen and (max-width: 400px) {
-            /* Position of each slide panel */
-            /* Notes: justify-content: center; and align-items: center; align the content, not the slder
-               To align the slider vertically, set the height of the container element, .testimonial-slider,
-               to fill the viewport vertically, and then use flex-direction: column; */
-            .testimonial-slider {
-                width: 95%;
-                margin: 0 auto; /* Center the slider horizontally */
-                border-radius: 10px;
-                display: flex; /* Use flexbox */
-                font-size: 1.1em;
-                justify-content: center; /* Center items horizontally */
-                align-items: center; /* Center items vertically */
-                /* Fill the viewport vertically, so flex-direction: column can center it vertically */
-                /* When 100vh, buttons are at bottom of screen and can't be raised up, so use 80vh */
-                height: 70vh; 
-                flex-direction: column; /* Stack slides vertically */
-            }
-
-             /* Styling for individual testimonial slides */
-            .testimonial-slide {
-                display: none;
-                text-align: center; 
-                /* Slide box to have a constant WxH dimension 235px x 145px */
-                width: 235px;
-                height: 160px;
-                padding-left: 10px;
-                padding-right: 10px;
-                padding-top: 10px;
-                padding-bottom: 10px;  
-                background-color: #6863632d; /* Adjust background color */
-                border-radius: 5px;
-                margin-bottom: 20px;
-            }
-        }
-        
-        /* For larger screens */
-        @media only screen and (min-width: 401px) {
-            /* Position of each slide panel */
-            .testimonial-slider {
-                width: 400px; /* Adjust the width of slider panel */
-                border-radius: 10px;
-                margin: 0 auto; /* Center the slider horizontally */
-                display: flex; /* Use flexbox */
-                justify-content: center; /* Center items horizontally */
-                align-items: center; /* Center items vertically */
-                /* Fill the viewport vertically, so flex-direction: column can center it vertically */
-                /* When 100vh, buttons are at bottom of screen and can't be raised up, so use 80vh */
-                height: 65vh;
-                flex-direction: column; /* Stack slides vertically */
-            }
-
-            /* Styling for individual testimonial slides */
-            .testimonial-slide {
-                display: none;
-                text-align: center;
-                /* Slide box to have a constant WxH dimension 350px x 145px */
-                width: 350px;
-                height: 145px;
-                font-size: 1.2em;
-                padding-left: 10px;
-                padding-right: 10px;
-                padding-top: 10px;
-                padding-bottom: 10px;  
-                background-color: #6863632d; /* Adjust background color */
-                border-radius: 5px;
-                margin-bottom: 20px;
-            }
+        /* Styles for the slider container */
+        .testimonial-slider {
+            width: 325px; /* Somehow this center the slider box in the middle of screen */
+            height: auto; /* Will fit gthe content of the slide ( which is set to 145px in testimonial-slide class) */
+            padding: 20px;
+            margin: 100px auto 0; /* Center the slider horizontally and add 100px margin from the top */
+            overflow: hidden; /* Hide overflowing content */
         }
 
-        /* Testimonials are structured as div elements with the class .testimonial-slide, 
-        each containing the testimonial content and the customer's name.                   
-        Styling for individual testimonial slides is defined in media query */
-     
-        /* Display active testimonial slide */
+        /* Styles for individual testimonial slides */
+        .testimonial-slide {
+            font-size: 1.1em;
+            height: 145px; /* Set fixed height of content */
+            padding: 10px; 
+            background-color: #6863632d; /* Adjust background color */
+            border-radius: 8px;
+            display: none; /* Hide slides by default */
+        }
+
+        /* Style for active slide */
         .testimonial-slide.active {
-            display: block;
+            display: block; /* Display active slide */
         }
 
-/* CSS for the slider navigation */
-.slider-navigation {
-    text-align: center; /* Center the buttons horizontally */
-    margin-top: 10px; /* Adjust the top margin as needed */
-}
+        /* Styles for navigation buttons */
+        .slider-navigation {
+            text-align: center; /* Center the buttons horizontally */
+            margin-top: 10px; /* Adjust the top margin */
+            margin-bottom: 20px; /* This controls the gap between slider and navigation arrows - doesn't seem to work! */
+        }
 
-/* Here, left and right arrows have same style. */
-/* Arrow can be Next, Previous, or unicode character ⮜ (or &#9664), ⮞, etc */
-.prev, .next {
-    padding: 5px 10px;  /* size of region/block where arrow is */
-    /* background-color: green;  background color for the block where arrow is. If not defined, so just see the arrow only */
-    color: black; /* color of arrow */
-    border: none;
-    border-radius: 5px; 
-    cursor: pointer;  /* Pointer curser when hover over the arrow */
-}
+        /* Styles for navigation arrows */
+        .arrow {
+            font-size: 24px;
+            padding: 5px 10px; /* Set padding for arrows */
+            color: black; /* Set arrow color */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer; /* Set cursor to pointer */
+        }
 
-/* .prev and .next classes control the gap between the 2 arrows */
-.prev {
-    margin-right: 80px;
-}
+        /* Adjust margin between arrows */
+        .prev {
+            margin-right: 110px;
+        }
 
-.next {
-    margin-left: 80px;
-}
+        .next {
+            margin-left: 110px;
+        }
 
-/* Color of stars rating */
-.star-rating {
-    color: rgb(59, 169, 238);
-}
-
-</style>
+        /* Color of stars rating */
+        .star-rating {
+            color: rgb(59, 169, 238);
+        }
+    </style>
 </head>
 <body class="testimonials-page">
     <!-- Header section -->
@@ -143,7 +86,7 @@
     <!-- Testimonial slider -->
     <div class="testimonial-slider">
         <!-- Individual testimonial slides -->
-        <div class="testimonial-slide">
+        <div class="testimonial-slide active">
             <span>"Awesome job at mowing the lawn. Highly recommend."</span>
             <br><br><br><br>
             <!-- Unicode characters &nbsp = space, &#x2605 = star -->
@@ -152,7 +95,7 @@
         </div>
         <div class="testimonial-slide">
             <span>"Fantastic! A reliable hard-worker. Definitely worth booking."</span>
-            <br><br><br>
+            <br><br><br><br>
             <cite>David</cite>
             <br><cite><span class="star-rating">(5) &#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span></cite>
         </div>
@@ -164,37 +107,37 @@
         </div>
         <div class="testimonial-slide">
             <span>"Excellent guy, commited to work."</span>
-            <br><br><br><br>
+            <br><br><br><br><br>
             <cite>Ebin</cite>
             <br><cite><span class="star-rating">(5) &#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span></cite>
         </div>
         <div class="testimonial-slide">
             <span>"A very hard-working and reliable guy who is dedicated to his job, would definitely book for next time."</span>
-            <br><br>
+            <br><br><br>
             <cite>Esther</cite>
             <br><cite><span class="star-rating">(5) &#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span></cite>
         </div>
         <div class="testimonial-slide">
             <span>"Brilliant job!! Will definitely use again."</span>
-            <br><br><br><br>
+            <br><br><br><br><br>
             <cite>Pete</cite>
             <br><cite><span class="star-rating">(5) &#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span></cite>
         </div>
         <div class="testimonial-slide">
             <span>"All positives from me! On time, efficient, reasonably priced and work really hard with a fantastic outcome. Definitely recommend!! Thank you."</span>
-            <br>
+            <br><br>
             <cite>Leigh</cite>
             <br><cite><span class="star-rating">(5) &#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span></cite>
         </div>
         <div class="testimonial-slide">
             <span>"To was extremely please and did an amazing job with garden tidy and hedge trimming, it was a pleasure dealing with him. Will engage again."</span>
-            <br>
+            <br><br>
             <cite>Monganthra</cite>
             <br><cite><span class="star-rating">(5) &#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span></cite>
         </div>
         <div class="testimonial-slide">
             <span>"To was fantastic. It was very hot on the day of the job but he stayed and finished it and he did a great job. Very happy."</span>
-            <br><br>
+            <br><br><br>
             <cite>Pattie</cite>
             <br><cite><span class="star-rating">(5) &#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span></cite>
         </div>
@@ -224,7 +167,7 @@
     <!-- JavaScript functions showSlide(index) and prevSlide() and nextSlide() control the visibility of the 
     testimonials based on the current slideIndex -->
     <script>
-    // JavaScript functions for controlling the testimonial slider
+        // JavaScript functions for controlling the testimonial slider
         let slideIndex = 0;
         showSlide(slideIndex);
 
@@ -244,7 +187,10 @@
                 slideIndex = 0;
             }
 
+            // Hide all slides
             slides.forEach(slide => slide.classList.remove('active'));
+
+            // Display the active slide
             slides[slideIndex].classList.add('active');
         }
     </script>
