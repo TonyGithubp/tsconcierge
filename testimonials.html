@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         /* For mobile devices */
-        @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: 500px) {
             /* Position of each slide panel */
             /* Notes: justify-content: center; and align-items: center; align the content, not the slder
                To align the slider vertically, set the height of the container element, .testimonial-slider,
@@ -29,6 +29,7 @@
              /* Styling for individual testimonial slides */
             .testimonial-slide {
                 display: none;
+                text-align: center; 
                 /* Slide box to have a constant WxH dimension 235px x 145px */
                 width: 235px;
                 height: 145px;
@@ -43,7 +44,7 @@
         }
         
         /* For larger screens */
-        @media only screen and (min-width: 601px) {
+        @media only screen and (min-width: 501px) {
             /* Position of each slide panel */
             .testimonial-slider {
                 width: 400px; /* Adjust the width of slider panel */
@@ -61,6 +62,7 @@
             /* Styling for individual testimonial slides */
             .testimonial-slide {
                 display: none;
+                text-align: center;
                 /* Slide box to have a constant WxH dimension 350px x 145px */
                 width: 350px;
                 height: 145px;
@@ -143,7 +145,7 @@
         <!-- Individual testimonial slides -->
         <div class="testimonial-slide">
             <span>"Awesome job at mowing the lawn. Highly recommend."</span>
-            <br><br><br><br>
+            <br><br><br>
             <!-- Unicode characters &nbsp = space, &#x2605 = star -->
             <cite>Richard</cite>
             <br><cite><span class="star-rating">(5) &#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span></cite>
