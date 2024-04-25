@@ -1,0 +1,231 @@
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Optional - makes the background fixed */
+  background-position: center;
+}
+
+/* For mobile phones */
+@media only screen and (max-width: 600px) {
+  body {
+      background-image: url('bkground-mbl.png');
+  }
+}
+
+/* For larger screens */
+@media only screen and (min-width: 601px) {
+  body {
+      background-image: url('bkground-dsk.png');
+  }
+}
+
+/* Styles specific to the about.html page */
+body.about-page {
+  background-image: url('bkg-mb.png');
+  /* Adjust background image properties as needed */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Removes bkground image for the services.html page */
+body.services-page {
+  background-image: url('bkg-mb.png');
+  /* Adjust background image properties as needed */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Removes bkground image for the termsandconditions.html page */
+body.testimonials-page {
+  background-image: url('bkg-mb.png');
+  /* Adjust background image properties as needed */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Removes bkground image for the terms.html page */
+body.terms-page {
+  background-image: url('bkg-mb.png');
+  /* Adjust background image properties as needed */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Removes bkground image for the contact.html page */
+body.contact-page {
+  background-image: url('bkg-mb.png');
+  /* Adjust background image properties as needed */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 30px;
+  margin-right: 10px;
+}
+
+.logo h2 {
+  font-size: 15px;
+  font-weight: lighter;
+  margin: 0;
+}
+
+h2 {
+  font-size: 15px;
+  font-weight: lighter;
+  margin: 0;
+}
+
+/* For the hamburger icon */
+.menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+/* This controls the appearance of popup menu for default mobile screens*/
+.menu {
+  display: none;
+  position: fixed;
+  top: 40px; right: 10px;  /* Position at (40, 10 from right) */
+  height: auto;
+  background-color: rgba(103, 71, 71, 0.7);
+  padding: 15px;
+  text-align: center;
+  z-index: 999;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 0 0 10px 10px; /* Rounded bottom corners to the menu box */
+} 
+
+.menu.active {
+  display: block;
+
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  padding: 10px 0;
+}
+
+.menu ul li a {
+  color: white;  /* Color of the popup menu text */
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Change text color to yellow on hover of menu */
+.menu ul li a:hover {
+  color: yellow; 
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 768px) {
+  .menu {
+      display: block;
+      position: relative;
+      top: 0px; right: 10px;  /* Position at (0,  10 from right), 
+      otherwise it will  (40, 10) as per the default mobile */
+      background-color: #333;  /* Otherwise it have the same color as per mobile */
+      width: auto;
+      padding: 0;
+      text-align: right;
+      overflow: visible;
+  }
+  .menu ul {
+      display: inline-block;
+  }
+  .menu ul li {
+      display: inline-block;
+      padding: 0 10px;
+  }
+
+  .menu ul li a.active {
+    color: rgb(27, 196, 27); /* Change text color to green for the active menu item */
+  }
+  
+  .menu-toggle {
+      display: none;
+  }
+}
+
+.flashing-text {
+  color: red;
+  animation: flash 2s infinite;
+}
+
+@keyframes flash {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.call {
+  margin-right: 10px;
+}
+
+/* Define 2 different classes for displaying phone in diferrent ways */
+/* Flashing phone number */
+.flashing-tel {
+  color: lightgreen;
+  text-decoration: none; /* Remove default underline */
+  animation: flash 2.5s infinite;
+}
+
+/* Not flashing phone number */
+.nfls-tel {
+  text-decoration: none;
+}
+
+/* Define for email */
+.unq-email {
+  text-decoration: none;
+}
+
+/* Define class for website link */
+.wbsite {
+  text-decoration: none;
+}

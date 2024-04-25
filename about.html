@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About TS Concierge</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Hide the larger screen text by default */
+        .large-screen-text {
+            display: none;
+        }
+
+        /* Text styles for mobile devices */
+        @media only screen and (max-width: 768px) {
+            .about-content {
+                text-align: center;
+                color: black;
+                justify-content: none;
+                align-items: none;
+                height: 100vh; /* Make the container full height of the viewport */
+            }
+        }
+        
+        /* Text styles for larger screens */
+        @media only screen and (min-width: 769px) {
+             /* Hide the mobile text for larger screens */
+            .mobile-text {
+                display: none;
+            }
+
+            /* Display the larger screen text for larger screens */
+            .large-screen-text {  
+                display: block;
+            }
+
+            .about-content {
+                text-align: left;
+                color: black;
+                justify-content: none;
+                align-items: none;
+                height: 100vh; /* Make the container full height of the viewport */
+            }
+        }
+    </style>
+</head>
+<body class="about-page">
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="TS Concierge Logo">
+            <h2>TS Concierge - <span style="color: lightgreen;">Garden &amp; Lawn Care</span></h2>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="terms.html">Terms and Conditions</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="mobile-text">
+        <div class="about-content">
+            <p>.</p>
+            <h3>Welcome to TS Concierge – <span style="color: rgb(40, 143, 40);">Garden &amp; Lawn Care</span>,</h3>
+            <span style="font-size: 1.1em;">
+            <p>where we believe in making life easier for our clients, one garden at a time.</p>
+            <p>The journey began with a simple dream – to provide assistance to those who need it. As the founder, I understand the challenges of balancing daily chores with other commitments, particularly for those with little to no time, physical limitations, or those who simply prefer not to do it themselves. Indeed, I sought to create a business where I could contribute to society while making a living.</p>
+            <p>With over 15 years of experience in the construction industry, I bring a wealth of knowledge and expertise to our services. From laborer to supervisor, I've worked in various roles, honing my skills in construction, surveying, and project management. But, having lived on a rural property for several years, it was my passion for maintaining my own acreage gardens and lawns that sparked the idea of turning this endeavor into a full-blown gardening service.</p>
+            <p>At TS Concierge, we offer a range of services tailored to meet your gardening and lawn care needs. From planting and weeding to lawn mowing and hedge trimming, we handle it all with care, precision, and attention to detail.</p>
+            <p>With TS Concierge, you can trust that your outdoor yards are in capable hands. Let us help you reclaim your time and enjoy a beautiful, well-maintained garden and lawn at an affordable price.</p>
+            <p>Thank you for considering TS Concierge. We are eager to assist you soon.</p>
+            <p>Regards,</p>
+            <p>To Sar</p>
+            </span>
+            <br><br><br>
+            <span>ABN 47473378535</span>
+            <br>
+            <span>Public Liability Insurance $5M</span>
+            <br>
+            <span>Jobs under $3,300 only</span>
+            <br><br><br><br>
+        </div>
+    </div>
+
+    <div class="large-screen-text">
+        <div class="about-content">
+            <p>.</p>
+            <h3><strong>Welcome to TS Concierge – Garden & Lawn Care,</strong></h3>
+            <span style="font-size: 1.2em;">
+            <p>where we believe in making life easier for our clients, one garden at a time.</p>
+            <p>The journey began with a simple dream – to provide assistance to those who need it. As the founder, I understand the challenges of balancing daily chores with other commitments, particularly for those with little to no time, physical limitations, or those who simply prefer not to do it themselves. Indeed, I sought to create a business where I could contribute to society while making a living.</p>
+            <p>With over 15 years of experience in the construction industry, I bring a wealth of knowledge and expertise to our services. From laborer to supervisor, I've worked in various roles, honing my skills in construction, surveying, and project management. But, having lived on a rural property for several years, it was my passion for maintaining my own acreage gardens and lawns that sparked the idea of turning this endeavor into a full-blown gardening service.</p>
+            <p>At TS Concierge, we offer a range of services tailored to meet your gardening and lawn care needs. From planting and weeding to lawn mowing and hedge trimming, we handle it all with care, precision, and attention to detail. Additionally, we plan to provide an errand running service to make your life even more convenient.</p>
+            <p>Our commitment to excellence extends beyond our services – it's ingrained in everything we do. We prioritize clear communication, ensuring that your needs are understood and met every step of the way. We value your safety and satisfaction, taking precautions to create a secure environment for both you and our team members.</p>
+            <p>With TS Concierge, you can trust that your outdoor yards are in capable hands. Let us help you reclaim your time and enjoy a beautiful, well-maintained garden and lawn at an affordable price.</p>
+            <p>Thank you for considering TS Concierge. We are eager to assist you soon.</p>
+            <p>Regards,</p>
+            <p>To Sar</p>
+            </span>
+            <br><br>
+            <p>ABN 47473378535 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Public Liability Insurance $5M &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Jobs under $3,300 only</p>
+            <br><br>
+        </div>
+    </div>
+
+    <footer>
+        <span>Call now &nbsp; <a href="tel:0481832896" class="flashing-tel">0481 832 896</a></span>  
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

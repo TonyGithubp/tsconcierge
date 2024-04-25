@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions - TS Concierge</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Hide the larger screen text by default */
+        .large-screen-text {
+            display: none;
+        }
+
+        /* Text styles for mobile devices */
+        @media only screen and (max-width: 768px) {
+            .terms-content {
+                text-align: center;
+                color: black;
+                justify-content: none;
+                align-items: none;
+                height: 100vh; /* Make the container full height of the viewport */
+            }
+        }
+        
+        /* Text styles for larger screens */
+        @media only screen and (min-width: 769px) {
+            /* Hide the mobile text for larger screens */
+            .mobile-text {
+                display: none;
+            }
+
+            /* Display the larger screen text for larger screens */
+            .large-screen-text {  
+                display: block;
+            }
+
+            .terms-content {
+                text-align: left;
+                color: black;
+                justify-content: none;
+                align-items: none;
+                height: 100vh; /* Make the container full height of the viewport */
+            }
+        }
+    </style>
+</head>
+<body class="terms-page">
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="TS Concierge Logo">
+            <h2>TS Concierge - <span style="color: lightgreen;">Garden &amp; Lawn Care</span></h2>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="terms.html">Terms and Conditions</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    /* Text for mobile screens */
+    <div class="mobile-text">
+        <div class="terms-content">
+            <p>.</p>
+            <span style="font-size: 1.05em;">
+            <p>By engaging the services of TS Concierge, clients acknowledge and agree to the <strong>terms</strong> outlined below. </p>
+            <p><strong>Communication</strong></p>
+            <p>TS Concierge values clear and effective communication with our clients. We will primarily communicate via phone, email, or in-person meetings as necessary to discuss service details, scheduling, and any other pertinent information.</p>
+            <p><strong>Day of Service</strong></p>
+            <p>On the scheduled day of service, our team will arrive at the agreed-upon time to perform the requested gardening and lawn care services. Clients are responsible for ensuring a safe environment for our service providers by securing dogs, unlocking gates for access, and keeping cars away from the mowing area to prevent damage caused by small rocks and debris projected by the mower or whipper snipper. Failure to comply with these safety measures may result in the service being postponed, cancelled, or even not performed, even if it is part of the quote.</p>
+            <p><strong>Pricing & Quotes</strong></p>
+            <p>Quotes provided by TS Concierge are based on visual inspection of the service area. However, if conditions or requirements change on the day of the service, the final price may be adjusted accordingly. Any changes to the quoted price will be communicated and agreed upon with the client.</p>
+            <p><strong>Client's Satisfaction</strong></p>
+            <p>TS Concierge is dedicated to ensuring 100% customer satisfaction. In the event that a client is not entirely satisfied with our service, we offer a guarantee to return and address any issues free of charge.</p>
+            <p><strong>Inclement Weather</strong></p>
+            <p>This includes rain, heavy wind, snow & hail, and heatwave over 35°C that would prevent us from safely and effectively performing the scheduled services. TS Concierge reserves the right to postpone the service to a later date. We will communicate any necessary changes to the client as soon as possible.</p>
+            <p><strong>Work Photos</strong></p>
+            <p>Photographs of before and after work areas may be taken for future reference and may be displayed online on TS Concierge’s Facebook, Google Profile, or website. We respect the privacy and preferences of our clients to promote and maintain trust and professional relationships. We greatly appreciate your consent for this. Please let us know if you do not consent.</p>
+            <p><strong>Cancellation</strong></p>
+            <p><strong>Clients</strong> may cancel services provided by TS Concierge at any time, but must agree to pay for any work that has been performed up to the point of cancellation. Upon notifying TS Concierge of the cancellation by email or text message, clients will be informed of the incurred charges, which must be settled immediately. Following payment, TS Concierge will terminate all further services for the client.</p>
+            <p><strong>TS Concierge</strong> reserves the right to cancel services to ensure the safety and well-being of both clients and staff in the event of extreme circumstances such as natural disasters or other unforeseen events beyond our control. TS Concierge remains committed to providing reliable services and will make every effort to mitigate any disruptions caused by such occurrences. We appreciate the understanding and cooperation of our clients during these exceptional circumstances.</p>
+            <p><strong>Dispute Resolution</strong></p>
+            <p>In the event of any disputes or concerns arising during the provision of services, clients are encouraged to communicate with our team promptly. We will make every effort to address and resolve any issues to the client's satisfaction in a timely manner.</p>
+            <p>.</p>
+            <p>.</p>
+        </div>
+    </div>    
+
+    <div class="large-screen-text">
+        <div class="terms-content">
+            <p>.</p>
+            <span style="font-size: 1.2em;">
+            <p>By engaging the services of TS Concierge, clients acknowledge and agree to the <strong>terms</strong> outlined below. </p>
+            <p><strong>Communication</strong></p>
+            <p>TS Concierge values clear and effective communication with our clients. We will primarily communicate via phone, email, or in-person meetings as necessary to discuss service details, scheduling, and any other pertinent information.</p>
+            <p><strong>Day of Service</strong></p>
+            <p>On the scheduled day of service, our team will arrive at the agreed-upon time to perform the requested gardening and lawn care services. Clients are responsible for ensuring a safe environment for our service providers by securing dogs, unlocking gates for access, and keeping cars away from the mowing area to prevent damage caused by small rocks and debris projected by the mower or whipper snipper. Failure to comply with these safety measures may result in the service being postponed, cancelled, or even not performed, even if it is part of the quote.</p>
+            <p><strong>Pricing & Quotes</strong></p>
+            <p>Quotes provided by TS Concierge are based on visual inspection of the service area. However, if conditions or requirements change on the day of the service, the final price may be adjusted accordingly. Any changes to the quoted price will be communicated and agreed upon with the client.</p>
+            <p><strong>Client's Satisfaction</strong></p>
+            <p>TS Concierge is dedicated to ensuring 100% customer satisfaction. In the event that a client is not entirely satisfied with our service, we offer a guarantee to return and address any issues free of charge.</p>
+            <p><strong>Inclement Weather</strong></p>
+            <p>This includes rain, heavy wind, snow & hail, and heatwave over 35°C that would prevent us from safely and effectively performing the scheduled services. TS Concierge reserves the right to postpone the service to a later date. We will communicate any necessary changes to the client as soon as possible.</p>
+            <p><strong>Work Photos</strong></p>
+            <p>Photographs of before and after work areas may be taken for future reference and may be displayed online on TS Concierge’s Facebook, Google Profile, or website. We respect the privacy and preferences of our clients to promote and maintain trust and professional relationships. We greatly appreciate your consent for this. Please let us know if you do not consent.</p>
+            <p><strong>Cancellation</strong></p>
+            <p><strong>Clients</strong> may cancel services provided by TS Concierge at any time, but must agree to pay for any work that has been performed up to the point of cancellation. Upon notifying TS Concierge of the cancellation by email or text message, clients will be informed of the incurred charges, which must be settled immediately. Following payment, TS Concierge will terminate all further services for the client.</p>
+            <p><strong>TS Concierge</strong> reserves the right to cancel services to ensure the safety and well-being of both clients and staff in the event of extreme circumstances such as natural disasters or other unforeseen events beyond our control. TS Concierge remains committed to providing reliable services and will make every effort to mitigate any disruptions caused by such occurrences. We appreciate the understanding and cooperation of our clients during these exceptional circumstances.</p>
+            <p><strong>Dispute Resolution</strong></p>
+            <p>In the event of any disputes or concerns arising during the provision of services, clients are encouraged to communicate with our team promptly. We will make every effort to address and resolve any issues to the client's satisfaction in a timely manner.</p>
+            <p>.</p>
+            <p>.</p>
+        </div>
+    </div>    
+
+    <footer>
+        <span>Call now &nbsp; <a href="tel:0481832896" class="flashing-tel">0481 832 896</a></span>  
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

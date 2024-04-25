@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - TS Concierge</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Centered red text for mobile devices */
+        @media only screen and (max-width: 600px) {
+            .contact-content {
+                text-align: center;
+                align-items: center;
+                font-size:1.1em;
+                height: 100vh;
+            }
+        }
+        
+        /* Centered blue text for larger screens */
+        @media only screen and (min-width: 601px) {
+            .contact-content {
+                text-align: center;
+                align-items: center;
+                font-size:1.2em;
+                height: 100vh;
+            }
+        }
+
+        .left-txt {
+            text-align: left;   
+            padding: 20px; 
+        }
+
+    </style>
+</head>
+<body class="contact-page">
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="TS Concierge Logo">
+            <h2>TS Concierge - <span style="color: lightgreen;">Garden &amp; Lawn Care</span></h2>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="terms.html">Terms and Conditions</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="contact-content">
+        <p>.</p>
+        <br>
+        <p>We welcome any enquiries you may have regarding our services, including quotes, bookings, or any other information you require. Please feel free to reach out to us via phone or email.</p>
+        Phone : <a href="tel:0481832896" class="nfls-tel">0481 832 896</a>   
+        <br>
+        Email : <a href="mailto:sar@tsconcierge.com.au" class="unq-email">sar@tsconcierge.com.au</a>
+        <br><br><br>
+        <span> </span>For more information, you may also want to visit us at : </span>
+        <br><br>
+        <a href="https://maps.app.goo.gl/5E7tx7zjJe6vEN8TA" class="wbsite">Google Business Profile</a>
+        <br><br>
+        <a href="https://www.facebook.com/tsconcierge/" class="wbsite">Facebook Business Page</a>
+        
+        
+    </div>
+
+    <footer>
+        <span></span> Call now &nbsp; <a href="tel:0481832896" class="flashing-tel">0481 832 896</a></span>  
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - TS Concierge</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Centered red text for mobile devices */
+        @media only screen and (max-width: 600px) {
+            .services-content-mb {
+                font-size: 1.1em;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+
+            /* This is to hide the content of desktop mode, but not really needed here as mobile is the default screen. */
+            .services-content-dsk {
+                display: none; /* Hide desktop content on mobile */
+            }
+        }
+        
+        /* Centered blue text for larger screens */
+        @media only screen and (min-width: 601px) {
+            .services-content-dsk {
+                font-size: 1.2em;
+                text-align: left;
+                justify-content: center;
+                align-items: center;
+                height: 100vh; 
+            }
+
+            /* Without this, the contents of both mobile and desktop will be shown in desktop screen mode. */
+            .services-content-mb {
+                display: none; /* Hide mobile content on desktop */
+            }
+        }
+
+        /* Style for service heading */
+        .service-title {
+            color: green;
+            font-size: 1.5em;
+        }
+
+        /* Style for images in mobile screen mode */
+        .photo-mb {
+            max-width: 100%; /* Set the maximum width to 100% of its container */
+            height: auto; /* Ensure the aspect ratio is maintained */
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Style for images in desktop screen mode */
+        .photo-dsk {
+            max-width: 40%; /* Set the maximum width to 100% of its container */
+            height: auto; /* Ensure the aspect ratio is maintained */
+            float: left; /* put image on left, and so text on the right if any */
+            margin-right: 30px;  
+            margin-bottom: 20px;
+        }
+
+        .sub-heading {
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body class="services-page">
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="TS Concierge Logo">
+            <h2>TS Concierge - <span style="color: lightgreen;">Garden &amp; Lawn Care</span></h2>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="terms.html">Terms and Conditions</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Mobile content -->
+    <div class="services-content-mb">
+        <br><br><br>
+        <span>TS Concierge offers a range of services tailored to meet your gardening and lawn mowing needs.  Whether it's lawn mowing, planting, weeding, hedge trimming, or cleanup, we handle each task with utmost care and an unwavering commitment to detail.</span>
+        <br><br><br>
+        <span class="service-title">Weeding</span><br><br>
+        <span>We do hand-pulling weeds very thoroughly.</span> 
+        <img src="grdn-weed.png" alt="Garden Weeding" class="photo-mb">
+        <span> We refrain from using chemical herbicides to safeguard the health of your family, pets, and the environment.</span>
+        <br><br><br>
+        <span class="service-title">Lawn Mowing</span><br><br> 
+        <span>We provide both regular and overgrown lawn mowing services. </span> 
+        <img src="lawn-mow1.png" alt="Garden Weeding" class="photo-mb">
+        <span>For regular maintenance, we can create a customized schedule that works for you, whether you prefer weekly, bi-weekly, or monthly mowing services.</span>
+        <br><br><br>
+        <span class="service-title">Planting</span><br><br>
+        <img src="grdn-plant.png" alt="Garden Weeding" class="photo-mb">
+        <span>Elevate your garden with our planting techniques, whether you're starting from scratch or looking to refresh your existing landscape. </span>
+        <br><br><br>
+        <span style="font-weight:bold";>Contact us now</span><span> to schedule your garden & lawn service and experience the difference TS Concierge can make for your outdoor living environment.</span>
+        <br><br>
+        <p>.</p>
+    </div>
+
+    <!-- Desktop content -->
+    <div class="services-content-dsk">
+        <br><br><br>
+        <span>TS Concierge offers a range of services tailored to meet your gardening and lawn care needs.  Whether it's lawn mowing, planting, weeding, hedge trimming, or cleanup, we handle each task with utmost care and an unwavering commitment to detail.</span>
+        <br><br><br>
+        <span class="service-title">Gardening</span><br><br>
+        <span>Unruly gardens full of overgrown weeds can be very annoying. Regular care maintenance is needed to keep your garden thriving, bringing you the natural beauty and joy.</span>
+        <br><br>
+        <span>We provide the following gardening services:</span>
+        <br><br><br>
+        <img src="grdn-weed.png" alt="Garden Weeding" class="photo-dsk">
+        <span class="sub-heading">Weeding.</span>  
+        <span></span>Overgrown weeds can be very bushy and compete with your plants for water, nutrients, and sunlight.  We do hand-pulling weeds very thoroughly. We refrain from using chemical herbicides to safeguard the health of your family, pets, and the environment.</span>
+        <br><br>
+        <span class="sub-heading">Trimming & Pruning</span> 
+        <span>helps maintain plant health, shape, and size by removing dead or diseased branches so as to promote new growth. We do both plants and hedges trimming.</span>
+        <br><br>
+        <span class="sub-heading">Mulching</span>
+        <span>helps retain soil moisture, suppress weeds, regulate soil  temperature, and      provides essential benefits for plant health and growth.  We help you place and spread mulch in garden beds.</span>
+        <br><br>
+        <span class="sub-heading">Planting.</span>    
+        <span>Elevate your garden with our planting techniques, whether you're starting from scratch or looking to refresh your existing landscape. </span>
+        <br><br><br>
+        
+        <span class="service-title">Lawn Mowing</span>
+        <br><br>
+        <span>Regular lawn mowing is essential for the health and appearance of your lawn. At TS Concierge, our lawn mowing service includes:</span>
+        <br><br><br>
+        <img src="lawn-mow1.png" alt="Garden Weeding" class="photo-dsk">
+        <span class="sub-heading">Lawn Mowing.</span>
+        <span>For regular maintenance, we can create a customized schedule that works for you, whether you prefer weekly, bi-weekly, or monthly mowing services. We also specialise in mowing and whipper snipping long overgrown lawns. </span>
+        <br><br>
+        <span class="sub-heading">Edging.</span>
+        <span>In addition to mowing, we provide thorough edging to define the borders of your lawn and give it a polished look. We pay close attention to detail, carefully edging and trimming around areas such as flower beds, walkways, and driveways, etc.</span>
+        <br><br>
+        <span class="sub-heading">Cleanup.</span>
+        <span>We take pride in leaving your property immaculate after every mowing service. We will   removes grass clippings, debris, and any stray trimmings, leaving your lawn looking pristine and well-groomed. </span>
+        <br><br><br>
+        <span style="font-weight: bold";>Contact us now </span><span> to schedule your garden & lawn service and experience the difference TS Concierge can make for your outdoor living environment.</span>
+        <br><br>
+        <p>.</p>
+    </div>
+
+    <footer>
+        <span>Call now &nbsp; <a href="tel:0481832896" class="flashing-tel">0481 832 896</a></span>  
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

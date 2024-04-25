@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials - TS Concierge</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* For mobile devices */
+        @media only screen and (max-width: 768px) {
+            /* Position of each slide panel */
+            /* Notes: justify-content: center; and align-items: center; align the content, not the slder
+               To align the slider vertically, set the height of the container element, .testimonial-slider,
+               to fill the viewport vertically, and then use flex-direction: column; */
+            .testimonial-slider {
+                width: 95%;
+                margin: 0 auto; /* Center the slider horizontally */
+                border-radius: 10px;
+                display: flex; /* Use flexbox */
+                font-size: 1.1em;
+                justify-content: center; /* Center items horizontally */
+                align-items: center; /* Center items vertically */
+                /* Fill the viewport vertically, so flex-direction: column can center it vertically */
+                /* When 100vh, buttons are at bottom of screen and can't be raised up, so use 80vh */
+                height: 80vh; 
+                flex-direction: column; /* Stack slides vertically */
+            }
+
+             /* Styling for individual testimonial slides */
+            .testimonial-slide {
+                display: none;
+                /* Slide box to have a constant WxH dimension 235px x 145px */
+                width: 235px;
+                height: 145px;
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-top: 10px;
+                padding-bottom: 10px;  
+                background-color: #6863632d; /* Adjust background color */
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+        }
+        
+        /* For larger screens */
+        @media only screen and (min-width: 769px) {
+            /* Position of each slide panel */
+            .testimonial-slider {
+                width: 400px; /* Adjust the width of slider panel */
+                border-radius: 10px;
+                margin: 0 auto; /* Center the slider horizontally */
+                display: flex; /* Use flexbox */
+                justify-content: center; /* Center items horizontally */
+                align-items: center; /* Center items vertically */
+                /* Fill the viewport vertically, so flex-direction: column can center it vertically */
+                /* When 100vh, buttons are at bottom of screen and can't be raised up, so use 80vh */
+                height: 80vh;
+                flex-direction: column; /* Stack slides vertically */
+            }
+
+            /* Styling for individual testimonial slides */
+            .testimonial-slide {
+                display: none;
+                /* Slide box to have a constant WxH dimension 350px x 145px */
+                width: 350px;
+                height: 145px;
+                font-size: 1.2em;
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-top: 10px;
+                padding-bottom: 10px;  
+                background-color: #6863632d; /* Adjust background color */
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Testimonials are structured as div elements with the class .testimonial-slide, 
+        each containing the testimonial content and the customer's name.                   
+        Styling for individual testimonial slides is defined in media query */
+     
+        /* Display active testimonial slide */
+        .testimonial-slide.active {
+            display: block;
+        }
+
+/* CSS for the slider navigation */
+.slider-navigation {
+    text-align: center; /* Center the buttons horizontally */
+    margin-top: 10px; /* Adjust the top margin as needed */
+}
+
+/* Here, left and right arrows have same style. */
+/* Arrow can be Next, Previous, or unicode character ⮜ (or &#9664), ⮞, etc */
+.prev, .next {
+    padding: 5px 10px;  /* size of region/block where arrow is */
+    /* background-color: green;  background color for the block where arrow is. If not defined, so just see the arrow only */
+    color: black; /* color of arrow */
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;  /* Pointer curser when hover over the arrow */
+}
+
+/* .prev and .next classes control the gap between the 2 arrows */
+.prev {
+    margin-right: 80px;
+}
+
+.next {
+    margin-left: 80px;
+}
+
+/* Color of stars rating */
+.star-rating {
+    color: rgb(59, 169, 238);
+}
+
+</style>
+</head>
+<body class="testimonials-page">
+    <!-- Header section -->
+    <header>
+        <!-- Logo and navigation menu -->
+        <div class="logo">
+            <img src="logo.png" alt="TS Concierge Logo">
+            <h2>TS Concierge - <span style="color: lightgreen;">Garden &amp; Lawn Care</span></h2>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="terms.html">Terms and Conditions</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Testimonial slider -->
+    <div class="testimonial-slider">
+        <!-- Individual testimonial slides -->
+        <div class="testimonial-slide">
+            <br>
+            <span>"Awesome job at mowing the lawn. Highly recommend."</span>
+            <br><br><br>
+            <!-- Unicode characters &nbsp = space, &#x2605 = star -->
+            <cite>Richard</cite>
+            <br><cite><span class="star-rating">(5) &#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span></cite>
+        </div>
+        <div class="testimonial-slide">
+            <br>
+            <span>"Fantastic! A reliable hard-worker. Definitely worth booking."</span>
+            <br><br>
+            <cite>David</cite>
+            <br><cite><span class="star-rating">(5) &#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span></cite>
+        </div>
+        <div class="testimonial-slide">
+            <br>
+            <span>"Excellent garden/weeding services at an affordable price."</span>
+            <br><br><br>
+            <cite>Jacob</cite>
+            <br><cite><span class="star-rating">(5) &#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span></cite>
+        </div>
+        <div class="testimonial-slide">
+            <br>
+            <span>"Excellent guy, commited to work."</span>
+            <br><br><br>
+            <cite>Ebin</cite>
+            <br><cite><span class="star-rating">(5) &#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span></cite>
+        </div>
+        <div class="testimonial-slide">
+            <span>"A very hard-working and reliable guy who is dedicated to his job, would definitely book for next time."</span>
+            <br><br>
+            <cite>Esther</cite>
+            <br><cite><span class="star-rating">(5) &#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span></cite>
+        </div>
+        <div class="testimonial-slide">
+            <br>
+            <span>"Brilliant job!! Will definitely use again."</span>
+            <br><br><br>
+            <cite>Pete</cite>
+            <br><cite><span class="star-rating">(5) &#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span></cite>
+        </div>
+        <div class="testimonial-slide">
+            <span>"All positives from me! On time, efficient, reasonably priced and work really hard with a fantastic outcome. Definitely recommend!! Thank you."</span>
+            <br>
+            <cite>Leigh</cite>
+            <br><cite><span class="star-rating">(5) &#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span></cite>
+        </div>
+        <div class="testimonial-slide">
+            <span>"To was extremely please and did an amazing job with garden tidy and hedge trimming, it was a pleasure dealing with him. Will engage again."</span>
+            <br>
+            <cite>Monganthra</cite>
+            <br><cite><span class="star-rating">(5) &#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span></cite>
+        </div>
+        <div class="testimonial-slide">
+            <span>"To was fantastic. It was very hot on the day of the job but he stayed and finished it and he did a great job. Very happy."</span>
+            <br><br>
+            <cite>Pattie</cite>
+            <br><cite><span class="star-rating">(5) &#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span></cite>
+        </div>
+        <div class="testimonial-slide">
+            <br>
+            <span>"Great! Thanks so much really appreciate it."</span>
+            <br><br><br>
+            <cite>Stacey</cite>
+            <br><cite><span class="star-rating">(5) &#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span></cite>
+        </div>
+    </div>
+
+    <!-- Navigation buttons -->
+    <div class="slider-navigation">
+        <span class="arrow prev" onclick="prevSlide()">&#9664;</span>
+        <span class="arrow next" onclick="nextSlide()">&#9654;</span>
+    </div>
+
+    <!-- Footer section -->
+    <footer>
+        <span>Call now &nbsp; <a href="tel:0481832896" class="flashing-tel">0481 832 896</a></span>  
+    </footer>
+
+    <!-- Common JavaScript code -->
+    <script src="script.js"></script>
+
+    <!-- Specific JavaScript -->
+    <!-- JavaScript functions showSlide(index) and prevSlide() and nextSlide() control the visibility of the 
+    testimonials based on the current slideIndex -->
+    <script>
+    // JavaScript functions for controlling the testimonial slider
+        let slideIndex = 0;
+        showSlide(slideIndex);
+
+        function prevSlide() {
+            showSlide(slideIndex -= 1);
+        }
+
+        function nextSlide() {
+            showSlide(slideIndex += 1);
+        }
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.testimonial-slide');
+            if (index < 0) {
+                slideIndex = slides.length - 1;
+            } else if (index >= slides.length) {
+                slideIndex = 0;
+            }
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[slideIndex].classList.add('active');
+        }
+    </script>
+</body>
+</html>
