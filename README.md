@@ -1,5 +1,5 @@
 # tsconcierge
-Website info for my TS Concierge (1 to 1 home service).
+Website info for TS Concierge - Garden & lawn Care.
 
 Website is designed using HTML, CSS & Java Script. Thanks to them all.
 
